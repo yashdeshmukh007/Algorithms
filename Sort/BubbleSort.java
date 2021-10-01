@@ -10,10 +10,10 @@ public class BubbleSort {
 
     static void bubbleSort(int[] arr)
     {
-        
+        boolean swap;
         for(int i=0;i<arr.length;i++)
         {
-           
+            swap=false;
             for(int j=1;j<arr.length-i;j++)
             {
                 if(arr[j]<arr[j-1])
@@ -21,13 +21,14 @@ public class BubbleSort {
                     int temp=arr[j];
                     arr[j]=arr[j-1];
                     arr[j-1]=temp;
+                    swap=true;
                     
                 }
             }
-            /*if(c==0)
+            if(!swap)
             {
                 break;
-            }*/
+            }
         }
 
     }
