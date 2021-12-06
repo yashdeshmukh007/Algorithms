@@ -1,5 +1,7 @@
 package Sort;
 import java.util.*;
+
+import Function.Function;
 public class InsertionSort {
     public static void main(String args[])
     {
@@ -9,6 +11,7 @@ public class InsertionSort {
     }
     static void insertionSort(int[] arr)
     {
+       
         int last=arr.length-1;
         int max=0;
         for(int i=0;i<arr.length;i++)
@@ -17,14 +20,13 @@ public class InsertionSort {
             for(int j=0;j<=last;j++)
             {
                 if(arr[max]<arr[j])
+
                 {
                     max=j;
                 }
                 
             }
-            int temp=arr[max];
-            arr[max]=arr[last];
-            arr[last]=temp;
+            Function.sort(arr, max, last);
             last--;
         }
     }

@@ -1,4 +1,5 @@
 package Sort;
+import Function.Function;
 import java.util.Arrays;
 public class BubbleSort {
     public static void main(String args[])
@@ -18,9 +19,7 @@ public class BubbleSort {
             {
                 if(arr[j]<arr[j-1])
                 {
-                    int temp=arr[j];
-                    arr[j]=arr[j-1];
-                    arr[j-1]=temp;
+                    Function.sort(arr,i,j);
                     swap=true;
                     
                 }
