@@ -11,9 +11,10 @@ public class LinearSearch {
      
         n=sc.nextInt();
         linearSearch(arr,n);
+        sc.close();
     }   
 
-     public static  void linearSearch(int arr[] ,int n)
+    public static  void linearSearch(int arr[] ,int n)
     {
 
         boolean f=false;
